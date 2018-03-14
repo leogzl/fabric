@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #
+# SPDX-License-Identifier: Apache-2.0
+#
 # hyperledger-fabricdocs documentation build configuration file, created by
 # sphinx-quickstart on Mon Feb 20 16:11:53 2017.
 #
@@ -43,19 +45,28 @@ extensions = ['sphinx.ext.autodoc',
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
+# recommonmark is a python utility that allows markdown to be used within
+# Sphinx projects.
+# Installed version as per directive in docs/requirement.txt
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
 
 # The master toctree document.
 master_doc = 'index'
 
 # General information about the project.
-project = u'hyperledger-fabricdocs'
-copyright = u'2017, hyperledger'
-author = u'hyperledger'
+project = u'BLOCKCHAIN TRANSACTION SERVICE'
+copyright = u'2018, Toyota LedgerNow Hyperledger-Fabric'
+author = u'TOYOTA MOTOR MANUFACTURING INDONESIA'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -113,7 +124,7 @@ def setup(app):
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'hyperledger-fabricdocsdoc'
+htmlhelp_basename = 'TOYOTA MOTOR MANUFACTURING INDONESIA - BLOCKCHAIN TRANSACTION SERVICE'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -140,7 +151,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'hyperledger-fabricdocs.tex', u'hyperledger-fabricdocs Documentation',
+    (master_doc, 'BLOCKCHAIN TRANSACTION SERVICE.tex', u'BLOCKCHAIN TRANSACTION SERVICE (HYPERLEDGER FABRIC)',
      u'hyperledger', 'manual'),
 ]
 
@@ -150,7 +161,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'hyperledger-fabricdocs', u'hyperledger-fabricdocs Documentation',
+    (master_doc, 'BLOCKCHAIN TRANSACTION SERVICE', u'BLOCKCHAIN TRANSACTION SERVICE (HYPERLEDGER FABRIC)',
      [author], 1)
 ]
 
@@ -161,8 +172,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'hyperledger-fabricdocs', u'hyperledger-fabricdocs Documentation',
-     author, 'hyperledger-fabricdocs', 'One line description of project.',
+    (master_doc, 'BLOCKCHAIN TRANSACTION SERVICE', u'BLOCKCHAIN TRANSACTION SERVICE (HYPERLEDGER FABRIC)',
+     author, 'BLOCKCHAIN TRANSACTION SERVICE', 'TOYOTA MOTOR MANUFACTURING INDONESIA',
      'Miscellaneous'),
 ]
 
