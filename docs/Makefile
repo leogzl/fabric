@@ -33,7 +33,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = hyperledger-fabricdocs
+SPHINXPROJ    = TOYOTA MOTOR MANUFACTURING INDONESIA - BLOCKCHAIN TRANSACTION SERVICE
 SOURCEDIR     = source
 BUILDDIR      = build
 
